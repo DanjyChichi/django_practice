@@ -8,7 +8,7 @@
   <h1>member</h1>
   <ul>
       {% for m in members %}
-      <li>{{ m }}</li>
+      <li><a href="{{ m.get_absolute_url }}">{{ m }}</a></li>
       <hr/>
       {% endfor %}
   </ul>

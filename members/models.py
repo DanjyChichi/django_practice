@@ -10,3 +10,6 @@ class Member(models.Model):
 
     def __str__(self):
         return f'[{self.pk}] {self.name} {self.email}'
+
+    def get_absolute_url(self):
+        return f'/members/{self.pk}/'
