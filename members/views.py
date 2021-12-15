@@ -20,6 +20,8 @@ def member_detail_page(request, pk):
         request,
         'members/member_detail_page.html',
         {
-            'member' : member
+            'member' : member,
         }
     )
+
+

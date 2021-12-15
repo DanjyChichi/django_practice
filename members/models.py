@@ -13,3 +13,9 @@ class Member(models.Model):
 
     def get_absolute_url(self):
         return f'/members/{self.pk}/'
+
+    def next_page(self):
+        return '/members/{}/'.format(int(self.pk) + 1)
+
+    def prev_page(self):
+        return '/members/{}/'.format(int(self.pk) - 1)

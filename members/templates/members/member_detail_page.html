@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ member.name }}}님의 회원정보</title>
+    <style>
+        h6 {
+            text-align : center;
+            }
+    </style>
 </head>
 <body>
 <nav>
@@ -12,5 +17,10 @@
 <h4>나이 : {{ member.age }}</h4>
 <h4>생년월일 : {{ member.birth }}</h4>
 <h4>이메일 : {{ member.email }}</h4>
+<hr/>
+<h6>
+<!--  조건문을 넣고 싶으나 못넣겠음 ㅠㅠ  -->
+<a href="{{ member.prev_page }}"> 이전 </a>&nbsp&nbsp{{ member.pk }}&nbsp&nbsp<a href="{{ member.next_page }}"> 다음 </a>
+</h6>
 </body>
 </html>
